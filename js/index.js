@@ -12,7 +12,7 @@ const checkbox = checkbox.innerHTML = `<label class="container">${input.value}
 
 const add = function (){
     if(input.value !== ""){
-    ul.innerHTML += `<li>${input.value}</li>`
+    ul.innerHTML += `<li>${checkbox}</li>`
     input.value = ""
 } else {
     alert("Seems like you have done all")  //alert on no input
