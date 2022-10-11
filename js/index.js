@@ -7,20 +7,20 @@ const checkbox = document.querySelector('input[type="checkbox"]')
 const progress = document.querySelector('.progress-bar')
 
 
-const checked = document.querySelectorAll('input[type="checkbox"]:checked')
+// const checked = document.querySelectorAll('input[type="checkbox"]:checked')
 
 let checked2 =[0];
 const add = function (){
     if(input.value !== ""){
-        task = `<label class="containerMark">
+
+        task = `<label class="containerMark">       
         <input type="checkbox" class="checkmark">
         <span>${input.value}</span>
         </label>`
+
     ul.innerHTML += `<li>${task}</li>`
     input.value = ""
     checked2 ++
-    console.log(checked2)
-    console.log(checked)
     document.querySelector('.progress-bar').style.width = checked2 + "%"// progressbar
 } else {
     alert("Seems like you have done all")  //alert on no input
