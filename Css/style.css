@@ -1,28 +1,38 @@
 /* tiny reset */
 html, body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
 }
+
 /* body */
-body{
+body {
   background: #4d244e;
   font-family: sans-serif;
   border-top: 5px solid #aa8e8d;
 }
+
+#title {
+  font-size: 6rem;
+  color: #ffdfdb;
+}
+
 /* ListELEMENTS */
 .list-unstyled {
   display: flexbox;
 }
-ul span{
+
+ul span {
   overflow: auto;
   word-wrap: break-word;
 }
-li{
- color: beige;
- font-size: 2rem;
+
+li {
+  color: beige;
+  font-size: 2rem;
 }
+
 main li::marker {
   content: '✝ ';
   font-size: 1.2em;
@@ -42,8 +52,8 @@ input:focus::placeholder {
 
 
 /* TASKBAR */
-.taskBar{
-  display:flex;
+.taskBar {
+  display: flex;
 }
 
 
@@ -51,7 +61,7 @@ input:focus::placeholder {
 
 
 .containerMark {
-  display:flex;
+  display: flex;
   gap: 2rem;
   padding-left: 35px;
   margin-bottom: 12px;
@@ -62,13 +72,13 @@ input:focus::placeholder {
   -ms-user-select: none;
   user-select: none;
 }
-.checkmark{
+
+.checkmark {
   height: 2rem;
   width: 2rem;
 }
-  
-  /* On mouse-over, add a grey background color */
-  .containerMark:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
 
+/* On mouse-over, add a grey background color */
+.containerMark:hover input~.checkmark {
+  background-color: #ccc;
+}

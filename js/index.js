@@ -1,10 +1,11 @@
-const bubble = document.querySelector(".bubble")
+const bubble = document.querySelectorAll(".bubble")
 const input = document.querySelector("#taskInput")
 const submit = document.querySelector("#submit")
 const ul = document.querySelector(".list-unstyled")
 const li = document.createElement("li")
 const checkbox = document.querySelector('input[type="checkbox"]')
 const progress = document.querySelector('.progress-bar')
+const wallpapers = "/src/Wallpaper/"
 
 
 // const checked = document.querySelectorAll('input[type="checkbox"]:checked')
@@ -35,6 +36,7 @@ submit.addEventListener("click",add)
 // WALLPAPER
 const changeWallpaper = ()=>{
     document.body.style.backgroundImage = "url('/src/Wallpaper/Montain.jpg')";
+    document.body.style.filter = "grayscale(100%)"
     console.log("Hello")
 }
 
@@ -47,3 +49,5 @@ bubble.addEventListener("click",changeWallpaper)
 // console.log(checkbox)
 //  checkbox.addEventListener('change', console.log(checked.length))
 
+
+bubble.addEventListener("click",console.log(wallpapers))
