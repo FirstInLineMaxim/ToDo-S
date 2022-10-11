@@ -10,7 +10,7 @@ const add = function (){
     ul.innerHTML += `<li>${input.value}</li>`
     input.value = ""
 } else {
-    alert("Seems like you have done all")
+    alert("Seems like you have done all")  //alert on no input
 }
 
 }
