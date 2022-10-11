@@ -11,9 +11,23 @@ body{
   font-family: sans-serif;
   border-top: 5px solid #aa8e8d;
 }
+/* ListELEMENTS */
+
+li{
+ color: beige;
+ font-size: 2rem;
+}
+li::marker {
+  content: '✝ ';
+  font-size: 1.2em;
+}
 
 li img {
   height: 40px;
   width: 40px;
   border-radius: 50%;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
