@@ -29,6 +29,14 @@ body {
   display: flexbox;
 }
 
+ul {
+  display: flex;  /*Added flex to ul so it wraps */
+  flex-flow: row;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
 ul span {
   overflow: auto;
   word-wrap: break-word;
@@ -90,4 +98,11 @@ input:focus::placeholder {
 /* On mouse-over, add a grey background color */
 .containerMark:hover input~.checkmark {
   background-color: #ccc;
+}
+
+#submit {
+  filter: brightness(4);
+}
+#submit:hover {
+  filter: brightness(2);
 }
