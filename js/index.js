@@ -5,9 +5,11 @@ const ul = document.querySelector(".list-unstyled")
 const li = document.createElement("li")
 const checkbox = document.querySelector('input[type="checkbox"]')
 const progress = document.querySelector('.progress-bar')
-// const checked = document.querySelectorAll('input[type="checkbox"]:checked')
+
+
+const checked = document.querySelectorAll('input[type="checkbox"]:checked')
+
 let checked2 =[0];
-// const task = [];
 const add = function (){
     if(input.value !== ""){
         task = `<label class="containerMark">
@@ -18,6 +20,7 @@ const add = function (){
     input.value = ""
     checked2 ++
     console.log(checked2)
+    console.log(checked)
     document.querySelector('.progress-bar').style.width = checked2 + "%"// progressbar
 } else {
     alert("Seems like you have done all")  //alert on no input
