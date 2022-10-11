@@ -17,7 +17,9 @@ Create a Todolist where I can :
 - Object-oriented approach:
   - Think of the architecture
   - Code the classes With properties and methods accordingly
+  - 
 ##Level 3
+
 Transform into React components for Todo / TodoList
 * Choose either arrow function programming / Class Definitions
 * All of the methods / properties should be set into the components
