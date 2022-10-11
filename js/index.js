@@ -3,15 +3,15 @@ const input = document.querySelector("#taskInput")
 const submit = document.querySelector("#submit")
 const ul = document.querySelector(".list-unstyled")
 const li = document.createElement("li")
-
-const checkbox = checkbox.innerHTML = `<label class="container">${input.value}
+const task = []
+const checkbox = `<label class="">${task}
 <input type="checkbox" checked="checked">
 <span class="checkmark"></span>
 </label>`
 
-
 const add = function (){
     if(input.value !== ""){
+        task.push(input.value)
     ul.innerHTML += `<li>${checkbox}</li>`
     input.value = ""
 } else {
