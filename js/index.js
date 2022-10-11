@@ -13,6 +13,7 @@ const add = function (){
 
 }
 
+submit.addEventListener("click",add)
 
 // WALLPAPER
 const changeWallpaper = ()=>{
