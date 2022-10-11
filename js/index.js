@@ -6,8 +6,12 @@ const li = document.createElement("li")
 
 
 const add = function (){
+    if(input.value !== ""){
     ul.innerHTML += `<li>${input.value}</li>`
     input.value = ""
+} else {
+    alert("Seems like you have done all")
+}
 
 }
 
