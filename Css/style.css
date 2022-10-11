@@ -17,7 +17,7 @@ li{
  color: beige;
  font-size: 2rem;
 }
-li::marker {
+main li::marker {
   content: '✝ ';
   font-size: 1.2em;
 }

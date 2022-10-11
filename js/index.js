@@ -4,6 +4,11 @@ const submit = document.querySelector("#submit")
 const ul = document.querySelector(".list-unstyled")
 const li = document.createElement("li")
 
+const checkbox = checkbox.innerHTML = `<label class="container">${input.value}
+<input type="checkbox" checked="checked">
+<span class="checkmark"></span>
+</label>`
+
 
 const add = function (){
     if(input.value !== ""){
