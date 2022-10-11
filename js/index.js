@@ -3,23 +3,29 @@ const input = document.querySelector("#taskInput")
 const submit = document.querySelector("#submit")
 const ul = document.querySelector(".list-unstyled")
 const li = document.createElement("li")
+const checkbox = document.querySelector('input[type="checkbox"]')
+const progress = document.querySelector('.progress-bar')
+// const checked = document.querySelectorAll('input[type="checkbox"]:checked')
+let checked2 =[0];
 // const task = [];
-let checkbox ;
-console.log(task)
 const add = function (){
     if(input.value !== ""){
-        task.push(input.value)
-        checkbox = `<label class="">
-        <input type="checkbox" checked="checked">
-        <span class="checkmark">${input.value}</span>
+        task = `<label class="containerMark">
+        <input type="checkbox" class="checkmark">
+        <span>${input.value}</span>
         </label>`
-    ul.innerHTML += `<li>${checkbox}</li>`
+    ul.innerHTML += `<li>${task}</li>`
     input.value = ""
+    checked2 ++
+    console.log(checked2)
+    document.querySelector('.progress-bar').style.width = checked2 + "%"// progressbar
 } else {
     alert("Seems like you have done all")  //alert on no input
 }
 
 }
+
+console.log(progress)
 
 submit.addEventListener("click",add)
 
@@ -31,4 +37,10 @@ const changeWallpaper = ()=>{
 
 bubble.addEventListener("click",changeWallpaper)
 //WALLPAPER END
+
+// CHECKBOX COUNTER
+
+
+// console.log(checkbox)
+//  checkbox.addEventListener('change', console.log(checked.length))
 
