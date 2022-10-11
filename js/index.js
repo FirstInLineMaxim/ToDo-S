@@ -1,4 +1,5 @@
 const bubble = document.querySelector(".bubble")
+const input = document.querySelector("#taskInput")
 
 
 const changeWallpaper = ()=>{
