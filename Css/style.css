@@ -36,9 +36,7 @@ li img {
 }
 
 
-input:focus::placeholder {
-  color: transparent;
-}
+
 
 .centerdProgress{
   display: flex;
