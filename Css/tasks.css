@@ -68,3 +68,7 @@ main li::marker {
 input:focus::placeholder {
     color: transparent;
   }
+
+  .task{
+    
+  }
