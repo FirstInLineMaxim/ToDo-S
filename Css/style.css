@@ -24,26 +24,6 @@ body {
   color: #ffdfdb;
 }
 
-/* ListELEMENTS */
-.list-unstyled {
-  display: flexbox;
-}
-
-
-ul span {
-  overflow: auto;
-  word-wrap: break-word;
-}
-
-li {
-  color: beige;
-  font-size: 2rem;
-}
-
-main li::marker {
-  content: '✝ ';
-  font-size: 1.2em;
-}
 
 li img {
   height: 40px;
@@ -59,47 +39,6 @@ li img {
 input:focus::placeholder {
   color: transparent;
 }
-
-
-/* TASKBAR */
-.taskBar {
-  display: flex;
-}
-
-
-/* CHECKMARK */
-
-
-.containerMark {
-  display: flex;
-  gap: 2rem;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.checkmark {
-  height: 2rem;
-  width: 2rem;
-}
-
-/* On mouse-over, add a grey background color */
-.containerMark:hover input~.checkmark {
-  background-color: #ccc;
-}
-
-#submit {
-  filter: brightness(4);
-}
-#submit:hover {
-  filter: brightness(2);
-}
-
 
 .centerdProgress{
   display: flex;
