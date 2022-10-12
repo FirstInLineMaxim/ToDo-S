@@ -6,6 +6,7 @@ const input = document.querySelector("#taskInput")
 const submit = document.querySelector("#submit")
 const ul = document.querySelector(".list-unstyled")
 const li = document.createElement("li")
+const task = document.querySelector("li")
 const label = document.createElement("label")
 const checkmark = document.createElement("input")
 const checkbox = document.querySelector('input[type="checkbox"]')
@@ -18,7 +19,7 @@ const forest = document.querySelector('#Forest')
 // const checked = document.querySelectorAll('input[type="checkbox"]:checked')
 
 
-// ADDING THE TASK + CHECKBOX
+
 // let checked2 = [0];
 // const add = function () {
 //     if (input.value !== "") {
@@ -39,6 +40,8 @@ const forest = document.querySelector('#Forest')
 
 // }
 
+
+// ADDING THE TASK + CHECKBOX
 let checked2 = [0];
 const add = function (){
     if (input.value !==""){
@@ -75,3 +78,4 @@ submit.addEventListener("click", add)
 bubble[0].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Montain.jpg')")
 bubble[1].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Montain_2.jpg')")
 bubble[2].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Forest.jpg')")
+li.addEventListener("click",() => li.style.textDecoration = "line-through"; )
