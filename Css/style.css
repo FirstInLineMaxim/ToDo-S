@@ -16,7 +16,7 @@ body {
   font-family: sans-serif;
   border-top: 5px solid #aa8e8d;
   background-repeat: no-repeat;
-  background-size:100%;
+  background-size: 100%;
 }
 
 #title {
@@ -30,6 +30,7 @@ li img {
   width: 40px;
   border-radius: 50%;
 }
+
 .show {
   display: flex;
 
@@ -38,7 +39,7 @@ li img {
 
 
 
-.centerdProgress{
+.centerdProgress {
   display: flex;
   justify-content: center;
 }
