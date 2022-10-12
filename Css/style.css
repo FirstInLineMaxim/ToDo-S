@@ -99,3 +99,9 @@ input:focus::placeholder {
 #submit:hover {
   filter: brightness(2);
 }
+
+
+.centerdProgress{
+  display: flex;
+  justify-content: center;
+}
