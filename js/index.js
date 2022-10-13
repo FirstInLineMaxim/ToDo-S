@@ -1,6 +1,8 @@
 const bubble = document.querySelectorAll(".bubble")
 const input = document.querySelector("#taskInput")
 const submit = document.querySelector("#submit")
+const ul = document.querySelector(".list-unstyled")
+const task = document.querySelector("li")
 const checkbox = document.querySelector('input[type="checkbox"]')
 const progress = document.querySelector('.progress-bar')
 // WALLPAPER BUBBLES
@@ -39,8 +41,9 @@ const checkmark = document.createElement("input")
 // ADDING THE TASK + CHECKBOX
 let checked2 = [0];
 const add = function () {
-    if (input.value !== "") {
 
+
+    if (input.value !== "" && input.value !== " ") {
         ul.innerHTML += `<label class="containerMark">       
         <li class="task"><input type="checkbox" class="checkmark">
             ${input.value}</li>
@@ -48,6 +51,9 @@ const add = function () {
         input.value = ""
         checked2++
         document.querySelector('.progress-bar').style.width = checked2 + "%"// progressbar
+
+
+
     } else {
         alert("Seems like you have done all")  //alert on no input
     }
@@ -56,7 +62,7 @@ const add = function () {
 //SUBMIT ON ENTER KEY PRESS
 input.addEventListener("keyup", function (event) {
     event.preventDefault();
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 || event.keyCode === 32) {
         submit.click();
     }
 });
