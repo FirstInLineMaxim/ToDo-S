@@ -37,17 +37,17 @@ const checkmark = document.createElement("input")
 
 // }
 
-  // const logo = document.querySelector('#logo')
-const ul = document.querySelector(".list-unstyled")  // const screen = document.querySelector('.screen')
 
+// ADDING li with Inputed Task to ul
+const ul = document.querySelector(".list-unstyled")
 const handleCLick = () => {
-  // alert('system on')
 
 
-  const li = document.createElement("li")       //   const h1 = document.createElement('h1')
+
+  const li = document.createElement("li")
   li.innerText = `${input.value}`
   
-  ul.appendChild(li) //   screen.appendChild(h1)
+  ul.appendChild(li)
 };
 
 submit.addEventListener('click', handleCLick)
