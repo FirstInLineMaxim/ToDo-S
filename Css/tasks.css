@@ -23,11 +23,19 @@ li {
     font-size: 2rem;
 }
 
+
 main li::marker {
     content: '✝ ';
     font-size: 1.2em;
 }
 
+/* INPUT FIELD FROM TASK LIST */
+
+li input:disabled{
+    background-color:transparent;
+    color: #ffdfdb;
+    border-color: transparent;
+}
 
 /* CHECKMARK */
 
