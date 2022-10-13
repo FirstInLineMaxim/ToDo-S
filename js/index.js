@@ -1,7 +1,7 @@
 const bubble = document.querySelectorAll(".bubble")
 const input = document.querySelector("#taskInput")
 const submit = document.querySelector("#submit")
-const ul = document.querySelector(".list-unstyled")
+// const ul = document.querySelector(".list-unstyled")
 const task = document.querySelector("li")
 const checkbox = document.querySelector('input[type="checkbox"]')
 const progress = document.querySelector('.progress-bar')
@@ -10,7 +10,7 @@ const montain = document.querySelector('#Montain')
 const montain2 = document.querySelector('#Montain2')
 const forest = document.querySelector('#Forest')
 //CREATE ELEMENTS
-const li = document.createElement("li")
+// const li = document.createElement("li")
 const label = document.createElement("label")
 const checkmark = document.createElement("input")
 // const checked = document.querySelectorAll('input[type="checkbox"]:checked')
@@ -37,27 +37,43 @@ const checkmark = document.createElement("input")
 
 // }
 
+  // const logo = document.querySelector('#logo')
+const ul = document.querySelector(".list-unstyled")  // const screen = document.querySelector('.screen')
+
+const handleCLick = () => {
+  // alert('system on')
+
+
+  const li = document.createElement("li")       //   const h1 = document.createElement('h1')
+  li.innerText = `${input.value}`
+  
+  ul.appendChild(li) //   screen.appendChild(h1)
+};
+
+submit.addEventListener('click', handleCLick)
+
+
 
 // ADDING THE TASK + CHECKBOX
-let checked2 = [0];
-const add = function () {
+// let checked2 = [0];
+// const add = function () {
 
 
-    if (input.value !== "" && input.value !== " ") {
-        ul.innerHTML += `<label class="containerMark">       
-        <li class="task"><input type="checkbox" class="checkmark">
-            ${input.value}</li>
-             </label>`
-        input.value = ""
-        checked2++
-        document.querySelector('.progress-bar').style.width = checked2 + "%"// progressbar
+//     if (input.value !== "" && input.value !== " ") {
+//         ul.innerHTML += `<label class="containerMark">       
+//         <li class="task"><input type="checkbox" class="checkmark">
+//             ${input.value}</li>
+//              </label>`
+//         input.value = ""
+//         checked2++
+//         document.querySelector('.progress-bar').style.width = checked2 + "%"// progressbar
 
 
 
-    } else {
-        alert("Seems like you have done all")  //alert on no input
-    }
-}
+//     } else {
+//         alert("Seems like you have done all")  //alert on no input
+//     }
+// }
 
 //SUBMIT ON ENTER KEY PRESS
 input.addEventListener("keyup", function (event) {
@@ -78,7 +94,7 @@ function Remove() {
 //COUNT CHECKED BOXES DISPLAY IN PROGRESS
 
 
-submit.addEventListener("click", add)
+// submit.addEventListener("click", add)
 bubble[0].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Montain.jpg')")
 bubble[1].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Montain_2.jpg')")
 bubble[2].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Forest.jpg')")
