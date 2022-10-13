@@ -19,6 +19,8 @@ ul span {
 }
 
 li {
+    display: flex;
+    gap: 2rem;
     color: beige;
     font-size: 2rem;
 }

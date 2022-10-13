@@ -1,8 +1,8 @@
 const bubble = document.querySelectorAll(".bubble")
 const input = document.querySelector("#taskInput")
 const submit = document.querySelector("#submit")
-// const ul = document.querySelector(".list-unstyled")
-const task = document.querySelector("li")
+let tasks = 0;
+
 const checkbox = document.querySelector('input[type="checkbox"]')
 const progress = document.querySelector('.progress-bar')
 // WALLPAPER BUBBLES
@@ -42,17 +42,30 @@ const checkmark = document.createElement("input")
 const ul = document.querySelector(".list-unstyled")
 const handleCLick = () => {
 
+    //Creates the list item with the tasks value 
+    const li = document.createElement("li")
+    const task = document.createElement("input")
+    task.value = `${input.value}`
+    task.disabled = true
+    task.className = "Tasks2"
+    // creates the edit button 
+    const edit = document.createElement("button")
+    edit.innerText = "edit"
+    //creates 
+    const del = document.createElement("button")
+    del.innerText = "del"
 
-
-  const li = document.createElement("li")
-  const task = document.createElement("input")
-  task.value = `${input.value}`
-  task.disabled = true
   ul.appendChild(li).appendChild(task)
+  li.appendChild(edit)
+  li.appendChild(del)
+  tasks = document.querySelectorAll(".Tasks2")
+  input.value = ""
+//   listen = tasks.addEventListener("click",edit)
 
 };
 
 submit.addEventListener('click', handleCLick)
+
 
 
 
@@ -92,11 +105,18 @@ function Remove() {
 }
 
 // EDIT
-
+function edit (e){
+    
+    tasks[e].disabled = false
+    console.log("hello")
+}
 //COUNT CHECKED BOXES DISPLAY IN PROGRESS
 
 
 // submit.addEventListener("click", add)
+
+
+let listen = null;
 bubble[0].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Montain.jpg')")
 bubble[1].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Montain_2.jpg')")
 bubble[2].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Forest.jpg')")
