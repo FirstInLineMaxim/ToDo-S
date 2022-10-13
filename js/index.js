@@ -45,9 +45,11 @@ const handleCLick = () => {
 
 
   const li = document.createElement("li")
-  li.innerText = `${input.value}`
-  
-  ul.appendChild(li)
+  const task = document.createElement("input")
+  task.value = `${input.value}`
+  task.disabled = true
+  ul.appendChild(li).appendChild(task)
+
 };
 
 submit.addEventListener('click', handleCLick)
