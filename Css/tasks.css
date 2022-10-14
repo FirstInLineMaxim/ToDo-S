@@ -80,4 +80,8 @@ input:focus::placeholder {
     color: transparent;
 }
 
-.task {}
+.Tasks2 {
+    display:flex;
+    height: 10rem;
+    text-overflow: ellipsis;
+}

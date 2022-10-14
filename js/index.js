@@ -22,7 +22,7 @@ const handleCLick = () => {
 
     //Creates the list item with the tasks value 
     const li = document.createElement("li")
-    const task = document.createElement("input")
+    const task = document.createElement("textarea")
     task.value = `${input.value}`
     task.disabled = true
     task.className = "Tasks2"
