@@ -1,0 +1,32 @@
+.edit {
+    background-image: url(/src/Buttons/pencil.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: auto;
+    color: transparent;
+    border: none;
+    background-color: transparent;
+}
+
+.del {
+    background-image: url(/src/Buttons/trash.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: auto;
+    font-size: 2rem;
+    color: transparent;
+    border: none;
+    background-color: transparent;
+}
+
+.save {
+    background-image: url(/src/Buttons/save.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: auto;
+    font-size: 2rem;
+    color: transparent;
+    border: none;
+    background-color: transparent;
+
+}
