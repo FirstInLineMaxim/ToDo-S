@@ -34,7 +34,7 @@ main li::marker {
 
 /* INPUT FIELD FROM TASK LIST */
 
-li input:disabled{
+li textarea:disabled{
     background-color:transparent;
     color: #ffdfdb;
     border-color: transparent;
