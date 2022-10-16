@@ -3,6 +3,11 @@
     display: flex;
 }
 
+/* task input and submit button container */
+#form{
+    padding-bottom: 2rem;
+}
+
 
 
 /* ListELEMENTS */

@@ -36,7 +36,7 @@
 
 .textarea {
     display:flex;
-    height: 4rem
+    height: 4rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
