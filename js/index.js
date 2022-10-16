@@ -1,26 +1,26 @@
+// Selectors 
 const bubble = document.querySelectorAll(".bubble")
 const input = document.querySelector("#taskInput")
 const submit = document.querySelector("#submit")
-let tasks = 0;
-
-const checkbox = document.querySelector('input[type="checkbox"]')
+let nonchecked = null ;
+const checked = document.querySelectorAll('input[type="checkbox"]:checked')
 const progress = document.querySelector('.progress-bar')
+
 // WALLPAPER BUBBLES
 const montain = document.querySelector('#Montain')
 const montain2 = document.querySelector('#Montain2')
 const forest = document.querySelector('#Forest')
+
 //CREATE ELEMENTS
-// const li = document.createElement("li")
-const label = document.createElement("label")
-const checkmark = document.createElement("input")
-// const checked = document.querySelectorAll('input[type="checkbox"]:checked')
 
 
-// ADDING li with Inputed Task to ul
+// ADDING li with Inputed Task to ul & the buttons edit delete
 const ul = document.querySelector(".list-unstyled")
 const handleCLick = () => {
 
     //Creates the list item with the tasks value 
+    const checkbox = document.createElement('input')
+    checkbox.setAttribute('type','checkbox')
     const li = document.createElement("li")
     const task = document.createElement("textarea")
     task.value = `${input.value}`
@@ -38,10 +38,13 @@ const handleCLick = () => {
     del.className = "del"
 
 
-  ul.appendChild(li).appendChild(task)
+  ul.appendChild(li).appendChild(checkbox)
+  li.appendChild(task)
   li.appendChild(edit)
   li.appendChild(del)
   input.value = ""
+
+  nonchecked = document.querySelectorAll('input[type="checkbox"]')
 
 };
 
@@ -62,15 +65,7 @@ taskList.addEventListener("click",function(e){
         Remove(e.target.parentElement)
         return
     }
-    //checks if uelement un ul is with class Task2.
-    // if(e.target.className === Task2){
-    //     //change class to something flex and bigger for conntent 
-    // }
 })
-
-
-// (e) => 
-// (e.target.className === "edit" && "save") ? edit(e.target.previousSibling) : console.log(e.target))
 
 
 
