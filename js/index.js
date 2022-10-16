@@ -134,10 +134,10 @@ function edit(selectedInput) {
 
 //Typing Title
 const typing=new Typed(".text", {
-    strings: ["", "Youtuber", "Freelancer", "Graphics Designer", "Web Designer", "Web Developer"],
+    strings: ["", "Just do it."],
     typeSpeed: 100,
     backSpeed: 40,
-    loop: true,
+    loop: false,
 });
 
 
