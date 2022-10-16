@@ -54,12 +54,24 @@ main li::marker {
 }
 
 /* INPUT FIELD FROM TASK LIST */
+.textarea {
+    display: flex;
+    min-width:500px;
+    padding: 0px;
+    box-sizing: border-box;
+    line-height: normal;
+    overflow: scroll;
+}
 
-li textarea:disabled {
+li .textarea:disabled {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     background-color: transparent;
     color: #ffdfdb;
     border-color: transparent;
 }
+
 
 /* CHECKMARK */
 

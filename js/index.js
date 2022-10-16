@@ -26,7 +26,7 @@ const handleCLick = () => {
         const checkbox = document.createElement('input')
         checkbox.setAttribute('type', 'checkbox')
         const li = document.createElement("li")
-        const task = document.createElement("textarea")
+        const task = document.createElement("input")
         task.value = `${input.value}`
         task.disabled = true
         task.className = "textarea"

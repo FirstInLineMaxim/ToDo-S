@@ -36,17 +36,6 @@
     filter: invert(100%);
 }
 
-.textarea {
-    display: flex;
-    height: 1em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 0px;
-    box-sizing: border-box;
-    line-height: normal;
-}
-
 /* CHECKBOX */
 input[type="checkbox"] {
     -webkit-appearance: none;

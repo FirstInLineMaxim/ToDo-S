@@ -53,3 +53,7 @@ li img {
      color: #ffdfdb;
     font-family: sans-serif;
 }
+
+.col-8 {
+  padding-top: 10rem;
+}
