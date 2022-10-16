@@ -19,66 +19,66 @@ const forest = document.querySelector('#Forest')
 // ADDING li with Inputed Task to ul & the buttons edit delete
 const ul = document.querySelector(".list-unstyled")
 const handleCLick = () => {
-    if(input.value !== "" ){
-//Creates the list item with the tasks value 
-const checkbox = document.createElement('input')
-checkbox.setAttribute('type','checkbox')
-const li = document.createElement("li")
-const task = document.createElement("textarea")
-task.value = `${input.value}`
-task.disabled = true
-task.className = "textarea"
+    if (input.value !== "") {
+        //Creates the list item with the tasks value 
+        const checkbox = document.createElement('input')
+        checkbox.setAttribute('type', 'checkbox')
+        const li = document.createElement("li")
+        const task = document.createElement("textarea")
+        task.value = `${input.value}`
+        task.disabled = true
+        task.className = "textarea"
 
-// creates the edit button 
-const edit = document.createElement("button")
-edit.innerText = "edit"
-edit.className = "edit"
+        // creates the edit button 
+        const edit = document.createElement("button")
+        edit.innerText = "edit"
+        edit.className = "edit"
 
-//creates 
-const del = document.createElement("button")
-del.innerText = "del"
-del.className = "del"
+        //creates 
+        const del = document.createElement("button")
+        del.innerText = "del"
+        del.className = "del"
 
 
-ul.appendChild(li).appendChild(checkbox)
-li.appendChild(task)
-li.appendChild(edit)
-li.appendChild(del)
-input.value = ""
+        ul.appendChild(li).appendChild(checkbox)
+        li.appendChild(task)
+        li.appendChild(edit)
+        li.appendChild(del)
+        input.value = ""
 
-nonchecked = document.querySelectorAll('input[type="checkbox"]')
-totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
+        nonchecked = document.querySelectorAll('input[type="checkbox"]')
+        totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
 
 
 
     } else {
- console.log("you need something in here")
+        console.log("you need something in here")
 
     }
-   
+
 };
 
 const taskList = document.querySelector(".list-unstyled") // 
-taskList.addEventListener("click",function(e){
-        //checks if uelement in ul is with class edit.
-    if (e.target.className === "edit"){
-        edit(e.target.previousSibling)
-        return 
-    } 
-    //checks if element in ul is with class save.
-    if (e.target.className === "save"){
+taskList.addEventListener("click", function (e) {
+    //checks if uelement in ul is with class edit.
+    if (e.target.className === "edit") {
         edit(e.target.previousSibling)
         return
-    }   
+    }
+    //checks if element in ul is with class save.
+    if (e.target.className === "save") {
+        edit(e.target.previousSibling)
+        return
+    }
     //checks if uelement un ul is with class del.
-    if (e.target.className === "del"){
+    if (e.target.className === "del") {
         Remove(e.target.parentElement)
         return
     }
-    if (e.target.type === "checkbox"){
+    if (e.target.type === "checkbox") {
         checked = document.querySelectorAll('input[type="checkbox"]:checked')
         totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
-        const percent = 100/`${nonchecked.length}`*`${checked.length}`
+        const percent = 100 / `${nonchecked.length}` * `${checked.length}`
         progress.style.width = `${percent}%`
         const newColor = document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
         return newColor
@@ -88,7 +88,7 @@ taskList.addEventListener("click",function(e){
 // CHECKING FOR CHECKED BOXES 
 // function checking (e) = {
 //     if (e.target == '[type:"checkbox"')
-   
+
 // }
 
 
@@ -109,14 +109,16 @@ function Remove(selectedLi) {
 }
 
 // EDIT
-function edit (selectedInput){
-    if (selectedInput.disabled === true){
+function edit(selectedInput) {
+    if (selectedInput.disabled === true) {
         selectedInput.disabled = false;
         //CHANGE PENCIL TO SAVE
         selectedInput.nextSibling.className = "save"
 
-    } else {selectedInput.disabled = true
-        selectedInput.nextSibling.className = "edit"}
+    } else {
+        selectedInput.disabled = true
+        selectedInput.nextSibling.className = "edit"
+    }
 
 }
 //COUNT CHECKED BOXES DISPLAY IN PROGRESS
@@ -164,7 +166,7 @@ bubble[2].addEventListener("click", () => document.body.style.backgroundImage = 
 
 
 //     if (input.value !== "" && input.value !== " ") {
-//         ul.innerHTML += `<label class="containerMark">       
+//         ul.innerHTML += `<label class="containerMark">
 //         <li class="task"><input type="checkbox" class="checkmark">
 //             ${input.value}</li>
 //              </label>`

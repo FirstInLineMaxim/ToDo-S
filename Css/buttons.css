@@ -35,7 +35,7 @@
 }
 
 .textarea {
-    display:flex;
+    display: flex;
     height: 4rem;
     overflow: hidden;
     text-overflow: ellipsis;

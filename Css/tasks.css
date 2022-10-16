@@ -4,7 +4,7 @@
 }
 
 /* task input and submit button container */
-#form{
+#form {
     padding-bottom: 2rem;
 }
 
@@ -39,8 +39,8 @@ main li::marker {
 
 /* INPUT FIELD FROM TASK LIST */
 
-li textarea:disabled{
-    background-color:transparent;
+li textarea:disabled {
+    background-color: transparent;
     color: #ffdfdb;
     border-color: transparent;
 }
@@ -81,11 +81,10 @@ li textarea:disabled{
 }
 
 /* INPUTBAR */
-#form{
-    gap:1rem
+#form {
+    gap: 1rem
 }
 
 input:focus::placeholder {
     color: transparent;
 }
-
