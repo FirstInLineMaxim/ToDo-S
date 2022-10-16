@@ -2,9 +2,10 @@
 const bubble = document.querySelectorAll(".bubble")
 const input = document.querySelector("#taskInput")
 const submit = document.querySelector("#submit")
-let nonchecked = null ;
-const checked = document.querySelectorAll('input[type="checkbox"]:checked')
+let nonchecked = "0" ;
+let checked = "0" ;
 const progress = document.querySelector('.progress-bar')
+const totalTasks = document.querySelector("#totalTasks")
 
 // WALLPAPER BUBBLES
 const montain = document.querySelector('#Montain')
@@ -45,6 +46,7 @@ const handleCLick = () => {
   input.value = ""
 
   nonchecked = document.querySelectorAll('input[type="checkbox"]')
+  totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
 
 };
 
@@ -65,9 +67,19 @@ taskList.addEventListener("click",function(e){
         Remove(e.target.parentElement)
         return
     }
+    if (e.target.type === "checkbox"){
+        checked = document.querySelectorAll('input[type="checkbox"]:checked')
+        totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
+        const percent = 100/`${nonchecked.length}`*`${checked.length}`
+        progress.style.width = `${percent}%`
+    }
 })
 
-
+// CHECKING FOR CHECKED BOXES 
+// function checking (e) = {
+//     if (e.target == '[type:"checkbox"')
+   
+// }
 
 
 
