@@ -41,6 +41,9 @@ const handleCLick = () => {
         del.innerText = "del"
         del.className = "del"
 
+        const div = document.createElement("div")
+        div.className = "buttons"
+
 
         ul.appendChild(li).appendChild(checkbox)
         li.appendChild(task)

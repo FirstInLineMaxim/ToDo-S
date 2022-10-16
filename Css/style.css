@@ -14,7 +14,7 @@ html, body {
 body {
   background: #4d244e;
   font-family: sans-serif;
-  border-top: 5px solid #aa8e8d;
+  /* border-top: 5px solid #aa8e8d; */
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -53,7 +53,14 @@ li img {
      color: #ffdfdb;
     font-family: sans-serif;
 }
-
+.row{
+  height: 100vh;
+}
+.container-fluid{
+height: 100vh;
+}
 .col-8 {
-  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

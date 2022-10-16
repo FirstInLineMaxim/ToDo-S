@@ -9,6 +9,8 @@
     width: 1em;
     filter: invert(100%);
 }
+.buttons{
+}
 
 .del {
     background-image: url(/src/Buttonsalt/trash.svg);
