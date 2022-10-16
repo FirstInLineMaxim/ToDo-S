@@ -19,38 +19,43 @@ const forest = document.querySelector('#Forest')
 // ADDING li with Inputed Task to ul & the buttons edit delete
 const ul = document.querySelector(".list-unstyled")
 const handleCLick = () => {
+    if(input.value !== "" ){
+//Creates the list item with the tasks value 
+const checkbox = document.createElement('input')
+checkbox.setAttribute('type','checkbox')
+const li = document.createElement("li")
+const task = document.createElement("textarea")
+task.value = `${input.value}`
+task.disabled = true
+task.className = "textarea"
 
-    //Creates the list item with the tasks value 
-    const checkbox = document.createElement('input')
-    checkbox.setAttribute('type','checkbox')
-    const li = document.createElement("li")
-    const task = document.createElement("textarea")
-    task.value = `${input.value}`
-    task.disabled = true
-    task.className = "textarea"
+// creates the edit button 
+const edit = document.createElement("button")
+edit.innerText = "edit"
+edit.className = "edit"
 
-    // creates the edit button 
-    const edit = document.createElement("button")
-    edit.innerText = "edit"
-    edit.className = "edit"
-
-    //creates 
-    const del = document.createElement("button")
-    del.innerText = "del"
-    del.className = "del"
+//creates 
+const del = document.createElement("button")
+del.innerText = "del"
+del.className = "del"
 
 
-  ul.appendChild(li).appendChild(checkbox)
-  li.appendChild(task)
-  li.appendChild(edit)
-  li.appendChild(del)
-  input.value = ""
+ul.appendChild(li).appendChild(checkbox)
+li.appendChild(task)
+li.appendChild(edit)
+li.appendChild(del)
+input.value = ""
 
-  nonchecked = document.querySelectorAll('input[type="checkbox"]')
-    totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
-  
-  
+nonchecked = document.querySelectorAll('input[type="checkbox"]')
+totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
 
+
+
+    } else {
+ console.log("you need something in here")
+
+    }
+   
 };
 
 const taskList = document.querySelector(".list-unstyled") // 
