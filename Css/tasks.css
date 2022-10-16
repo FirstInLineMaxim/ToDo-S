@@ -18,12 +18,12 @@ ul span {
     word-wrap: break-word;
 }
 
-li {
+.list-unstyled li {
     display: flex;
     gap: 2rem;
     color: beige;
     font-size: 2rem;
-    padding: 0.25rem;
+    align-items: baseline;
 }
 
 
@@ -68,6 +68,7 @@ li textarea:disabled{
 
 #submit {
     filter: brightness(4);
+    transform: rotate(45deg);
 }
 
 #submit:hover {
@@ -75,13 +76,11 @@ li textarea:disabled{
 }
 
 /* INPUTBAR */
+#form{
+    gap:1rem
+}
 
 input:focus::placeholder {
     color: transparent;
 }
 
-.Tasks2 {
-    display:flex;
-    height: 10rem;
-    text-overflow: ellipsis;
-}

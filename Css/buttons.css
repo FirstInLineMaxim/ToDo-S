@@ -6,6 +6,7 @@
     color: transparent;
     border: none;
     background-color: transparent;
+    width: 1em;
 }
 
 .del {
@@ -17,6 +18,7 @@
     color: transparent;
     border: none;
     background-color: transparent;
+    width: 1em;
 }
 
 .save {
@@ -28,5 +30,13 @@
     color: transparent;
     border: none;
     background-color: transparent;
+    width: 1em;
 
+}
+
+.textarea {
+    display:flex;
+    height: 4rem
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

@@ -25,7 +25,7 @@ const handleCLick = () => {
     const task = document.createElement("textarea")
     task.value = `${input.value}`
     task.disabled = true
-    task.className = "Tasks2"
+    task.className = "textarea"
 
     // creates the edit button 
     const edit = document.createElement("button")
