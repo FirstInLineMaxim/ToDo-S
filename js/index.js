@@ -12,6 +12,7 @@ const montain = document.querySelector('#Montain')
 const montain2 = document.querySelector('#Montain2')
 const forest = document.querySelector('#Forest')
 
+
 //CREATE ELEMENTS
 
 
@@ -74,7 +75,8 @@ taskList.addEventListener("click",function(e){
         totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
         const percent = 100/`${nonchecked.length}`*`${checked.length}`
         progress.style.width = `${percent}%`
-        document.body.style.backgroundColor = "#" + ((1<<24)*Math.random() | 0).toString(16)
+        const newColor = document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+        return newColor
     }
 })
 
