@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/Css/style.css" />
     <link rel="stylesheet" href="/Css/tasks.css" />
     <link rel="stylesheet" href="/Css/buttons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -36,7 +37,7 @@
           id="navbarSupportedContent"
         >
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
               <a class="nav-link" href="#" aria-current="page"
                 ><img
                   id="Montain"
@@ -63,7 +64,7 @@
                   alt="Forest"
                   class="bubble"
               /></a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </nav>
@@ -77,7 +78,8 @@
           <div class="col-8">
             <!-- TODOS list -->
             <!-- TITLE -->
-            <h1 id="title" class="text-center">Just do it.</h1>
+            <div id="title" class="text-center"> <div>I'm</div>
+              <div class="text"></div></div>
             <!-- INPUT -->
             <div id="form" class="taskBar justify-content-center">
               <input
@@ -103,7 +105,7 @@
             </div>
             <!-- progressbar -->
             <div class="centerdProgress">
-              <div class="progress w-50" style="height: 20px">
+              <div class="progress" style="height: 20px">
                 <div
                   class="progress-bar"
                   role="progressbar"
@@ -113,8 +115,9 @@
                   aria-valuemax="100"
                 ></div>
               </div>
-              <p id="totalTasks"></p>
             </div>
+            <div class="totalTask"> <p id="totalTasks"></p></div>
+           
             <!-- SEARCH -->
           </div>
           <div class="col-2"></div>

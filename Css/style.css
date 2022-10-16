@@ -20,6 +20,8 @@ body {
 }
 
 #title {
+  display: flex;
+  justify-content: center;
   font-size: 6rem;
   color: #ffdfdb;
 }
@@ -38,8 +40,17 @@ li img {
 
 
 
-
+.progress{
+  width: 35%;
+}
 .centerdProgress {
   display: flex;
   justify-content: center;
+}
+
+.text{
+    font-size: 6rem;
+     color: #ffdfdb;
+    font-family: sans-serif;
+    color: rgb(255, 30, 0);
 }

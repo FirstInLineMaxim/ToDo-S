@@ -34,14 +34,16 @@
     background-color: transparent;
     width: 1em;
     filter: invert(100%);
-
 }
 
 .textarea {
     display: flex;
-    height: 4rem;
+    height: 1em;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 0px;
+    box-sizing: border-box;
+    line-height: normal;
 }
 
 /* CHECKBOX */
@@ -52,6 +54,7 @@ input[type="checkbox"] {
     margin: 0;
     font: inherit;
     color: currentColor;
+    background-color: transparent;
     width: 1em;
     height: 1em;
     border: 0.15em solid currentColor;
@@ -71,7 +74,7 @@ input[type="checkbox"] {
   }
   input[type="checkbox"]:checked::before {
     transform: scale(1);
-    background-color: CanvasText;
+    background-color: white;
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
   }

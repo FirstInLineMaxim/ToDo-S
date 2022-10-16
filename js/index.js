@@ -11,6 +11,8 @@ const totalTasks = document.querySelector("#totalTasks")
 const montain = document.querySelector('#Montain')
 const montain2 = document.querySelector('#Montain2')
 const forest = document.querySelector('#Forest')
+let newColorbg ;
+let bgColor = localStorage.getItem(newColorbg)
 
 
 //CREATE ELEMENTS
@@ -75,13 +77,15 @@ taskList.addEventListener("click", function (e) {
         Remove(e.target.parentElement)
         return
     }
+
+    //COUNT CHECKED BOXES DISPLAY IN PROGRESS
     if (e.target.type === "checkbox") {
         checked = document.querySelectorAll('input[type="checkbox"]:checked')
         totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
         const percent = 100 / `${nonchecked.length}` * `${checked.length}`
         progress.style.width = `${percent}%`
         const newColor = document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
-        return newColor
+        newColor 
     }
 })
 
@@ -92,8 +96,9 @@ taskList.addEventListener("click", function (e) {
 // }
 
 function color(){
-    const newColor = document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
-        return newColor
+    const newColorbg1 = document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+        localStorage.setItem(newColorbg,newColorbg1)
+        return newColorbg
 }
 
 
@@ -126,12 +131,19 @@ function edit(selectedInput) {
     }
 
 }
-//COUNT CHECKED BOXES DISPLAY IN PROGRESS
+
+//Typing Title
+const typing=new Typed(".text", {
+    strings: ["", "Youtuber", "Freelancer", "Graphics Designer", "Web Designer", "Web Developer"],
+    typeSpeed: 100,
+    backSpeed: 40,
+    loop: true,
+});
 
 
-bubble[0].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Montain.jpg')")
-bubble[1].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Montain_2.jpg')")
-bubble[2].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Forest.jpg')")
+// bubble[0].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Montain.jpg')")
+// bubble[1].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Montain_2.jpg')")
+// bubble[2].addEventListener("click", () => document.body.style.backgroundImage = "url('\/src/Wallpaper/Forest.jpg')")
 
 
 

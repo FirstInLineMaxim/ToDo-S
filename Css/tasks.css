@@ -7,6 +7,22 @@
 #form {
     padding-bottom: 2rem;
 }
+#taskInput{
+    border-radius: 15px;
+    border-color: white;
+    border-width: 0px;
+}
+::-webkit-input-placeholder{
+    padding-left: 5%;
+}
+.totalTask{
+    display: flex;
+    justify-content: center;
+}
+.totalTask p{
+    color: white;
+    padding-top: 0.5em;
+}
 
 
 
@@ -47,13 +63,17 @@ li textarea:disabled {
 
 /* CHECKMARK */
 
-
+textarea:focus, input:focus{
+    outline: none;
+}
 
 #submit {
+    transition: all .2s ease-in-out; 
 }
 
 #submit:hover {
-    filter: invert(100%);
+    filter: invert(50%);
+    transform: scale(1.1); 
 }
 
 /* INPUTBAR */
