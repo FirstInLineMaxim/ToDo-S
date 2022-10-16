@@ -2,8 +2,8 @@
 const bubble = document.querySelectorAll(".bubble")
 const input = document.querySelector("#taskInput")
 const submit = document.querySelector("#submit")
-let nonchecked = "0" ;
-let checked = "0" ;
+let nonchecked = null;
+let checked = document.querySelectorAll('input[type="checkbox"]:checked');
 const progress = document.querySelector('.progress-bar')
 const totalTasks = document.querySelector("#totalTasks")
 
@@ -46,7 +46,9 @@ const handleCLick = () => {
   input.value = ""
 
   nonchecked = document.querySelectorAll('input[type="checkbox"]')
-  totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
+    totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
+  
+  
 
 };
 
@@ -72,6 +74,7 @@ taskList.addEventListener("click",function(e){
         totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
         const percent = 100/`${nonchecked.length}`*`${checked.length}`
         progress.style.width = `${percent}%`
+        // document.body.style.backgroundColor = "#fff"
     }
 })
 
