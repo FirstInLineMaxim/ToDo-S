@@ -11,12 +11,21 @@ const totalTasks = document.querySelector("#totalTasks")
 const montain = document.querySelector('#Montain')
 const montain2 = document.querySelector('#Montain2')
 const forest = document.querySelector('#Forest')
-let newColorbg ;
-let bgColor = localStorage.getItem(newColorbg)
+
+// LocalStorage
+document.body.style.backgroundColor = localStorage.getItem("newColorbg")
 
 
-//CREATE ELEMENTS
+// let tasks = {Done: "", TaskValue:"",};
 
+const tasks = {
+    taks1: {done:"template", task:"template"},
+}
+
+console.log(tasks)
+tasks.task4 = {done:"true", task:"test3"}
+// Object.assign({},tasks,{task4: {done:"test", task:"wassup"})
+console.log(tasks)
 
 // ADDING li with Inputed Task to ul & the buttons edit delete
 const ul = document.querySelector(".list-unstyled")
@@ -31,6 +40,14 @@ const handleCLick = () => {
         task.disabled = true
         task.className = "textarea"
 
+
+
+        
+        //check tasks length
+        // const total = Object.keys(tasks).length
+        // console.log(total)
+        // tasks[`task ${total}`] = {done:"false", task:`${input.value}`}
+        
         // creates the edit button 
         const edit = document.createElement("button")
         edit.innerText = "edit"
@@ -53,7 +70,7 @@ const handleCLick = () => {
 
         nonchecked = document.querySelectorAll('input[type="checkbox"]')
         totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
-
+        console.log(tasks)
 
 
     } else {
@@ -87,8 +104,9 @@ taskList.addEventListener("click", function (e) {
         totalTasks.innerText = `Tasks done ${checked.length} out of ${nonchecked.length}`
         const percent = 100 / `${nonchecked.length}` * `${checked.length}`
         progress.style.width = `${percent}%`
-        const newColor = document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
-        newColor 
+        const newColorbg = document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+        localStorage.setItem("newColorbg",newColorbg)
+        return newColorbg 
     }
 })
 
@@ -99,8 +117,8 @@ taskList.addEventListener("click", function (e) {
 // }
 
 function color(){
-    const newColorbg1 = document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
-        localStorage.setItem(newColorbg,newColorbg1)
+    const newColorbg = document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+        localStorage.setItem("newColorbg",newColorbg)
         return newColorbg
 }
 
